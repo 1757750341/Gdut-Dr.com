@@ -4,7 +4,7 @@ module("luci.controller.gdut-drcom", package.seeall)
 --	entry({"admin","gdut-drcom"}, cbi("gdut-drcom"), _("Dr.com"), 2)--
 --	end--
 function index()
-	entry({"admin", "services", "gdut-drcom"}, cbi("gdut-drcom"), _("Dr.com"), 58)
+	entry({"admin", "services", "gdut-drcom"}, cbi("gdut-drcom"), _("Dr.com广工"), 58)
 	end
 
 
