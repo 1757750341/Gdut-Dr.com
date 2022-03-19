@@ -23,10 +23,9 @@ enable = s:option(Flag, "enable", translate("Dr.com认证"))
 enabledial = s:option(Flag, "enabledial", translate("认证拨号"))
 enabledial.default = enabledial.enabled
 
-ifname = s:option(ListValue, "ifname", translate("接口名称"), translate("选择<strong>eth0.2</strong>"))
-ifname:depends("enabledial", "1")
+ifname = s:option(ListValue, "ifname", translate("AuthInterface"),translate("Chose your authentication interface"))
 for k, v in ipairs(luci.sys.net.devices()) do
-	if string.sub(v,0,3) == "eth" then
+	if v ~= "lo" then
 		ifname:value(v)
 	end
 end
